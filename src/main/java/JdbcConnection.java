@@ -10,7 +10,7 @@ public class JdbcConnection {
         Statement statement = connection.createStatement();
         statement.executeUpdate(createSql);
 
-        //Insert row
+        //Insert rows
         String insertSql = "INSERT into employee (name,email) VALUES (?,?)";
         PreparedStatement preparedStatement = connection.prepareStatement(insertSql);
         preparedStatement.setString(1,"Jhon Doe2");
